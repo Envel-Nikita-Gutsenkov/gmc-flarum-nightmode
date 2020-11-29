@@ -1,0 +1,35 @@
+fof-nightmode:
+    ref:
+        auto: Автоматическая тема (зависит от настроек устройства)
+        light: Дневная тема
+        dark: Ночная тема
+
+    admin:
+        settings:
+            modal:
+                title: FoF Night Mode
+                default_theme: Default forum theme
+                default_theme_helper: The default theme is automatically set for new users and guests.
+                default_theme_important: This will also affect existing users who have not manually selected a theme!
+                theme_auto: => fof-nightmode.ref.auto
+                theme_light: => fof-nightmode.ref.light
+                theme_dark: => fof-nightmode.ref.dark
+    forum:
+        day: => fof-nightmode.ref.light
+        night: => fof-nightmode.ref.dark
+
+        user:
+            settings:
+                heading: Тема
+                description: Выберите цветовую тему, которую вы хотите использовать на форуме.
+                description2: Эта тема будет связана с вашей учетной записью и будет применяться ко всем вашим устройствам, если вы не включите переключатель ниже для настройки каждого устройства.
+                device_specific_setting_checkbox: Использовать индивидуальную настройку для каждого устройства
+                device_specific_setting_checkbox_tooltip: Ваш выбор темы будет сохранен индивидуально для каждого из ваших устройств.
+                options:
+                    auto: => fof-nightmode.ref.auto
+                    day: => fof-nightmode.ref.light
+                    night: => fof-nightmode.ref.dark
+                option_descriptions:
+                    auto: Ваша тема будет автоматически выбрана в зависимости от настроек Вашего браузера или устройства. Например, если у вас включен темный режим в iOS, форум тоже будет темным.
+                    day: Классический опыт, к которому вы привыкли.
+                    night: Вы немного похожи на сову. Вы сторожите форум ночью, пока птицы спят, а лисы охотятся. Или вы просто предпочитаете более темные цвета!
